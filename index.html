@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Synthesizer</title>
+  <script src="synth.js"></script>
+</head>
+<body>
+  <canvas id="demoCanvas" width="800" height="600"
+style="border:1px solid #000000;">
+  </canvas>
+  <button style="position: absolute; left: 100px; top: 100px; " onclick="playWave('sine')">Sine</button>
+  <button style="position: absolute; left: 200px; top: 100px; " onclick="playWave('square')">Square</button>
+  <button style="position: absolute; left: 300px; top: 100px; " onclick="playWave('sawtooth')">Sawtooth</button>
+  <button style="position: absolute; left: 420px; top: 100px; " onclick="playWave('triangle')">Triangle</button>
+  <button style="position: absolute; left: 540px; top: 100px; " onclick="playWave('custom')">Custom</button>
+
+<script>
+</script>
+
+<input style="position: absolute; left: 150px; top: 170px; " id="slide" type="range" min="1" max="100" step="1" value="1" onchange="updateFreqSlider(this.value)">
+<label style="position: absolute; left: 20px; top: 170px; " id="freqLabel" for="frequency">Frequency</label>
+
+<input style="position: absolute; left: 150px; top: 200px; " id="slide" type="range" min="0" max="100" step="1" value="1" onchange="updateGainSlider(this.value)">
+<label style="position: absolute; left: 20px; top: 200px; " id="gainLabel" for="gain">Gain</label>
+
+
+<label style="position: absolute; left: 20px; top: 300px; " id="envelopeLabel" for="envelope">Envelopes:</label>
+<button style="position: absolute; left: 100px; top: 300px; " onclick="startTone(1)">Slow Ramp</button>
+<button style="position: absolute; left: 250px; top: 300px; " onclick="startTone(2)">Up and Down</button>
+<button style="position: absolute; left: 400px; top: 300px; " onclick="startTone(3)">Quick Ramp</button>
+
+</body>
+</html>
